@@ -1,13 +1,14 @@
 const ul = document.querySelector('ul');
-const button = document.querySelector('button');
-
-const input = document.getElementById('add');
+const input = document.querySelector('#add');
+const button = document.querySelector('#submit');
 
 //pridavanie do zoznamu
 
 button.addEventListener('click', () => {
     console.log(input);
-    ul.innerHTML += "<li>" + input.value + "</li>";
+    let add = input.value.trim();
+    ul.innerHTML += `<li>${add}</li>`;
+    input.textContent = '';
 });
 
 
