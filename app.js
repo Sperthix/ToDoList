@@ -6,8 +6,7 @@ const button = document.querySelector('#submit');
 
 button.addEventListener('click', () => {
     console.log(input);
-    let add = input.value.trim();
-    ul.innerHTML += `<li>${add}</li>`;
+    ul.innerHTML += `<li>${input.value.trim()}</li>`;
     input.textContent = '';
 });
 
