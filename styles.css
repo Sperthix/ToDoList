@@ -1,0 +1,29 @@
+body{
+    background-color: rgb(68, 67, 67);
+}
+
+h1{
+    color: rgb(4, 179, 4);
+}
+
+body > div > form > label{
+    color: rgb(4, 179, 4);
+}
+
+.zoznam{
+    max-width: 500px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.delete{
+    cursor: pointer;
+}
+
+input[type=text],
+input[type=text]:focus{
+  color: #fff;
+  border: none;
+  background: rgba(0,0,0,0.2);
+  max-width: 500px;
+}
