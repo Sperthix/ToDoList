@@ -27,3 +27,7 @@ input[type=text]:focus{
   background: rgba(0,0,0,0.2);
   max-width: 500px;
 }
+
+.hide{
+    display: none !important;
+}

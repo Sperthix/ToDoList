@@ -1,5 +1,6 @@
 const addItem = document.querySelector('.add');
 const list = document.querySelector('.todos');
+const searchField = document.querySelector('.search input');
 
 const createLi = newItem => {
 
@@ -30,4 +31,19 @@ list.addEventListener('click', e => {
         e.target.parentElement.remove();
     }
 })
+//prehladavanie zoznamu
 
+const filterList = (phrase) => {
+    Array.from(list.children)
+    .filter(item => !item.textContent.toLowerCase().includes(phrase))
+    .forEach(item => item.classList.add('hide'))
+
+    Array.from(list.children)
+    .filter(item => item.textContent.toLowerCase().includes(phrase))
+    .forEach(item => item.classList.remove('hide'))
+}
+
+searchField.addEventListener('keyup', () => {
+    const phrase = searchField.value.trim().toLowerCase();
+    filterList(phrase);
+})
