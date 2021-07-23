@@ -1,23 +1,33 @@
-const ul = document.querySelector('ul');
-const input = document.querySelector('#add');
-const button = document.querySelector('#submit');
+const addItem = document.querySelector('.add');
+const list = document.querySelector('.todos');
+
+const createLi = newItem => {
+
+    const html = `
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>${newItem}</span>
+        <i class="far fa-trash-alt delete"></i>
+    </li>
+    `;
+    list.innerHTML += html;
+}
+
 
 //pridavanie do zoznamu
 
-button.addEventListener('click', () => {
-    console.log(input);
-    ul.innerHTML += `<li>${input.value.trim()}</li>`;
-    input.textContent = '';
-});
-
+addItem.addEventListener('submit', e => {
+    e.preventDefault();
+    const newItem = addItem.add.value.trim();
+    if(newItem.length > 0)
+        createLi(newItem);
+    addItem.reset();
+})
 
 //odoberanie zo zoznamu
 
-ul.addEventListener('click', e => {
-    if (e.target.tagName == "LI"){
-        e.target.remove();
+list.addEventListener('click', e => {
+    if(e.target.classList.contains('delete')){
+        e.target.parentElement.remove();
     }
-    else{
-        console.log("Kam to klikas ty chuju?");
-    }
-});
+})
+
