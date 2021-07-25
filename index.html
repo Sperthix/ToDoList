@@ -1,44 +1,66 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nakupny Zoznam</title>
-    <script src="https://kit.fontawesome.com/6215c9c604.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nakupny Zoznam</title>
+  <script src="https://kit.fontawesome.com/6215c9c604.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <div class="zoznam">
+  <div class="zoznam">
 
-        <header class="text-center text-light my-4">
-          <h1 class="mb-4">Nakupny zoznam</h1>
-          <form class="search">
-            <input class="form-control m-auto" type="text" name="search" placeholder="vyhladaj polozku" />
-          </form>
-        </header>
-    
-        <ul class="list-group todos mx-auto text-light">
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span>mlieko</span>
-            <i class="far fa-trash-alt delete"></i>
-          </li>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span>kecup</span>
-            <i class="far fa-trash-alt delete"></i>
-          </li>
-        </ul>
-    
-        <form class="add text-center my-4">
-          <label>Pridaj novu polozku</label>
-          <input class="form-control m-auto" type="text" name="add" />
-        </form>
-    
-      </div>
+    <header class="text-center text-light my-4">
+      <h1 class="mb-4">Nakupny zoznam</h1>
+      <form class="search">
+        <input class="form-control m-auto" type="text" name="search" placeholder="vyhladaj polozku" />
+      </form>
+    </header>
 
-      div
+    <ul class="nakupnyZoznam list-group mx-auto text-light">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>mlieko</span>
+        <span>
+          <i class="addToCart fas fa-cart-plus"></i>
+          <i class="delete fas fa-trash"></i>
+        </span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>kecup</span>
+        <span>
+          <i class="addToCart fas fa-cart-plus"></i>
+          <i class="delete fas fa-trash"></i>
+        </span>
+      </li>
+    </ul>
 
-<script src="app.js"></script>
+    <form class="add text-center my-4">
+      <label>Pridaj novu polozku</label>
+      <input class="form-control m-auto" type="text" name="add" />
+    </form>
+
+  </div>
+
+  <aside class="nakup">
+
+    <header class="text-center my-5">
+      <h1 class="mb-5">V kosiku</h1>
+    </header>
+
+    <ul class="vKosiku list-group mx-auto text=text-light">
+    </ul>
+
+    <input class="nakupene my-5" type="submit" value="Nakupene">
+
+  </aside>
+
+
+  <script src="app.js"></script>
 </body>
+
 </html>

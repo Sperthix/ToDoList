@@ -1,5 +1,6 @@
 body{
-    background-color: rgb(68, 67, 67);
+    background-color: rgb(43, 41, 41);
+    display: flex;
 }
 
 h1{
@@ -16,7 +17,17 @@ body > div > form > label{
     margin: 30px auto;
 }
 
+.nakup{
+    max-width: 300px;
+    text-align: center;
+    margin: 30px auto;
+}
+
 .delete{
+    cursor: pointer;
+}
+
+.addToCart{
     cursor: pointer;
 }
 
