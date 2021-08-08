@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(43, 41, 41);
+    display: flex;
+}
+
+h1{
+    color: rgb(4, 179, 4);
+}
+
+body > div > form > label{
+    color: rgb(4, 179, 4);
+}
+
+.zoznam{
+    max-width: 500px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.nakup{
+    max-width: 300px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.delete{
+    cursor: pointer;
+}
+
+.addToCart{
+    cursor: pointer;
+}
+
+input[type=text],
+input[type=text]:focus{
+  color: #fff;
+  border: none;
+  background: rgba(0,0,0,0.2);
+  max-width: 500px;
+}
+
+.hide{
+    display: none !important;
+}
